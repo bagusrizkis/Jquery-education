@@ -10,6 +10,7 @@ class UserController {
         let payload = { email: data.email, id: data.id };
         const access_token = signToken(payload);
         res.status(201).json({
+          success: true,
           access_token,
         });
       })
@@ -29,6 +30,7 @@ class UserController {
             const payload = { email: user.email, id: user.id };
             const access_token = signToken(payload);
             res.status(201).json({
+              success: true,
               access_token,
             });
           } else {
